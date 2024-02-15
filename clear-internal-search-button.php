@@ -3,7 +3,7 @@
 Plugin Name: Clear Internal Search Button
 Plugin URI: https://wordpress.org/plugins/clear-internal-search-button/
 Description: Adds a button to clear the text of the internal search field for posts and pages in the WordPress admin area.
-Version: 1.0
+Version: 1.1
 Requires at least: 6.0
 Tested up to: 6.5
 Requires PHP: 7.0
