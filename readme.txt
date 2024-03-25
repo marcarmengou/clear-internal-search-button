@@ -5,7 +5,7 @@ Requires at least: 6.0
 Tested up to: 6.5
 Requires PHP: 7.0
 Tested PHP: 8.3
-Stable tag: 1.1
+Stable tag: 1.2
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -24,11 +24,17 @@ Clear Internal Search Button adds a button to clear the text of the internal sea
 
 == Changelog ==
 
+= 1.2 =
+
+* 2023-25-03
+* Some corrections.
+
+
 = 1.1 =
 
 * 2023-15-01
-* Now the button appears only when there is text in the search field.
-* Added the button to the comments and users pages.
+* Button appears only when there is text in the search field.
+* Added the clear button to the comments and users pages.
 
 = 1.0 =
 
