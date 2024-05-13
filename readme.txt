@@ -24,27 +24,20 @@ When you need to make heavy use of WordPress internal search on posts, pages, co
 
 == Changelog ==
 
-= 1.4 =
-
-* 2024-13-05
+= [1.4] - 2024-13-05 =
 
 * Security fixes
 
-= 1.3 =
-
-* 2024-27-04
+= [1.3] - 2024-27-04 =
 
 * Added clear button on media library, categories, plugins and themes pages.
 
-= 1.2 =
-
-* 2024-31-03
+= [1.2] - 2024-31-03 =
 
 * Button appears only when there is text in the search field.
 * Added clear button on comments and users pages.
 * Some corrections.
 
-= 1.0 =
+= [1.0] - 2024-15-01 =
 
-* 2024-15-01
 * First version.
