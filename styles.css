@@ -1,3 +1,8 @@
-#clear-internal-search-button {
+.button.clear-search-button {
+    display: none;
     margin: 0 3px;
+}
+
+.wp-filter .search-plugins .button.clear-search-button {
+	margin: 10px 0px 0px 3px;
 }
