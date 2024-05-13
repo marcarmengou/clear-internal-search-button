@@ -5,6 +5,10 @@ When you need to make heavy use of WordPress internal search on posts, pages, co
 
 ![clear-internal-search-button](https://github.com/marcarmengou/clear-internal-search-button/assets/83702259/17af922b-36e4-4692-9448-acd0b18c4cc5)
 
+## Resources
+
+WordPress Plugin Repository: https://wordpress.org/plugins/clear-internal-search-button/
+
 ## Requirements
 - WordPress 6.0+
 - PHP 7.0+
