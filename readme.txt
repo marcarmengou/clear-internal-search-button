@@ -5,7 +5,7 @@ Requires at least: 6.0
 Tested up to: 6.5
 Requires PHP: 7.0
 Tested PHP: 8.3
-Stable tag: 1.4
+Stable tag: 1.5
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -19,14 +19,16 @@ When you need to make heavy use of WordPress internal search on posts, pages, co
 
 == Installation ==
 
-1. Use the Add New Plugin in the WordPress Admin area
-2. Activate the plugin through the Plugins menu in WordPress
+1. Go to **Plugins > Add New Plugin**.
+2. Search for **Clear Internal Search Button**.
+3. Install and activate the **Clear Internal Search Button** plugin.
 
 == Changelog ==
 
-= [1.4] - 2024-13-05 =
+= [1.5] - 2024-14-05 =
 
-* Security fixes
+* Added version to `wp_enqueue_style`.
+* Security fix
 
 = [1.3] - 2024-27-04 =
 
