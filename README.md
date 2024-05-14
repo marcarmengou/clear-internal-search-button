@@ -3,7 +3,7 @@ Clear Internal Search Button adds a button to clear the text of the internal sea
 
 When you need to make heavy use of WordPress internal search on posts, pages, comments or users, you may need a button to clear text from the search field to save time and improve usability in that mechanical processes.
 
-![clear-internal-search-button](https://github.com/marcarmengou/clear-internal-search-button/assets/83702259/17af922b-36e4-4692-9448-acd0b18c4cc5)
+![screenshot-1.png](https://github.com/marcarmengou/clear-internal-search-button/blob/bb7a50ee94d7a884f92a15914f7551e3ec313b3c/screenshot-1.png)
 
 ## Resources
 
