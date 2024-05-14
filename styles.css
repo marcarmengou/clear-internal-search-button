@@ -1,8 +1,28 @@
-.button.clear-search-button {
-    display: none;
-    margin: 0 3px;
+.wp-core-ui p .button {
+	vertical-align: top !important;
 }
 
-.wp-filter .search-plugins .button.clear-search-button {
-	margin: 10px 0px 0px 3px;
+.search-field-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.button.clear-search-button {
+	position: absolute;
+	margin: 0px -37px;
+	padding: 0px 12px;
+}
+
+div.media-toolbar-primary.search-form .button.clear-search-button, form.search-form.search-plugins p.search-box .button.clear-search-button, div.wp-filter.hide-if-no-js > form > div > button{
+	margin: 0px -33px;
+}
+
+form.search-form.search-plugins .search-field-wrapper .button.clear-search-button {
+    margin: 10px -33px;
+}
+
+#wpbody-content > div.wrap > form > div > button {
+	position: absolute;
+	margin: -2px -13px;
+	z-index: 10;
 }

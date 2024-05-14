@@ -5,7 +5,7 @@ Requires at least: 6.0
 Tested up to: 6.5
 Requires PHP: 7.0
 Tested PHP: 8.3
-Stable tag: 1.5
+Stable tag: 1.6
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -25,7 +25,11 @@ When you need to make heavy use of WordPress internal search on posts, pages, co
 
 == Changelog ==
 
-= [1.5] - 2024-14-05 =
+= [1.6] - 2024-14-05 =
+
+* Added "X" button inside the search field.
+
+= [1.5] - 2024-13-05 =
 
 * Added version to `wp_enqueue_style`.
 * Security fix

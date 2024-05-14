@@ -1,10 +1,4 @@
 jQuery(document).ready(function($) {
-    // Verify that clearSearchData is defined correctly
-    if (typeof clearSearchData === 'undefined' || typeof clearSearchData.buttonText === 'undefined') {
-        console.error('clearSearchData is not defined correctly.');
-        return;
-    }
-
     // Define a list of selectors for the search fields
     const searchFieldsSelectors = ['#post-search-input', '#comment-search-input', '#user-search-input', '#media-search-input', '#plugin-search-input', '#wp-filter-search-input', '#search-plugins', '#tag-search-input'];
 
@@ -12,10 +6,14 @@ jQuery(document).ready(function($) {
     searchFieldsSelectors.forEach(function(selector) {
         const $searchField = $(selector);
 
-        if($searchField.length) {
-            // Creates the button but initially hidden
-            const buttonText = $('<div>').text(clearSearchData.buttonText).html();
-            const $button = $('<button type="button" class="button clear-search-button">' + buttonText + '</button>').insertAfter($searchField);
+        if ($searchField.length) {
+            // Wraps each search field in a div that will position the clear button
+            $searchField.wrap('<div class="search-field-wrapper"></div>');
+            const $wrapper = $searchField.parent();
+
+            // Creates the button inside the search field, initially hidden
+            const $button = $('<button type="button" class="button clear-search-button" style="display: none;" aria-label="Clear search field">X</button>');
+            $wrapper.append($button);
 
             // Function to control the visibility of the button based on the content of the search field
             function toggleButtonVisibility() {
