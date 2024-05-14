@@ -9,13 +9,13 @@ Stable tag: 1.6
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Adds a button to clear text of the search fields in WordPress admin for posts, pages, comments, users, media, categories, tags, plugins, and themes.
+Adds a button in admin area to clear text of search field for posts, pages, comments, users, media, categories, tags, plugins, and themes.
 
 == Description ==
 
-Clear Internal Search Button adds a button to clear the text of the internal search field for posts, pages, comments, users, media library, categories, tags, plugins and themes sections in the WordPress admin area.
+Adds a button to clear the search field inside the admin area that will save you time and make intensive search usage more convenient.
 
-When you need to make heavy use of WordPress internal search on posts, pages, comments, users, media library, categories, tags, plugins or themes you may need a button to clear text from the search field to save time and improve usability in that mechanical processes.
+Works in the search engine for posts, pages, comments, users, media library, categories, tags, plugins and themes.
 
 == Installation ==
 
