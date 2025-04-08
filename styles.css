@@ -1,28 +1,39 @@
+/* Ensures button aligns at the top */
 .wp-core-ui p .button {
 	vertical-align: top !important;
 }
 
+/* Wrapper for search field to position clear button */
 .search-field-wrapper {
     position: relative;
     display: inline-block;
 }
 
+/* Button position inside search field */
 .button.clear-search-button {
 	position: absolute;
 	margin: 0px -37px;
 	padding: 0px 12px;
 }
 
+/* Button position in /wp-admin/upload.php */
 div.media-toolbar-primary.search-form .button.clear-search-button, form.search-form.search-plugins p.search-box .button.clear-search-button, div.wp-filter.hide-if-no-js > form > div > button{
 	margin: 0px -33px;
 }
 
+/* Button position in /wp-admin/plugin-install.php */
 form.search-form.search-plugins .search-field-wrapper .button.clear-search-button {
-    margin: 10px -33px;
+    margin: 0px -34px;
 }
 
+/* Button position in /wp-admin/themes.php (when more than one theme is installed) */
 #wpbody-content > div.wrap > form > div > button {
 	position: absolute;
 	margin: -2px -13px;
 	z-index: 10;
+}
+
+/* Prevent text from being hidden behind the clear button */
+.search-field-wrapper input[type="search"], .search-field-wrapper input[type="text"] {
+    padding-right: 20px; /* space for the clear button */
 }

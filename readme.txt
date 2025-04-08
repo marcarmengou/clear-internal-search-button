@@ -2,10 +2,10 @@
 Contributors: marc4
 Tags: clear, internal, search, button, usability
 Requires at least: 6.0
-Tested up to: 6.5
+Tested up to: 6.8
 Requires PHP: 7.0
 Tested PHP: 8.3
-Stable tag: 1.6
+Stable tag: 1.9
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -24,6 +24,16 @@ Works in the search engine for posts, pages, comments, users, media library, cat
 3. Install and activate the **Clear Internal Search Button** plugin.
 
 == Changelog ==
+
+= [1.9] - 2024-08-04 =
+
+* Scripts and styles will be loaded only when necessary.
+* Prevent text from hiding behind the clear button.
+
+= [1.8] - 2024-28-10 =
+
+* Commented style.css
+* Fixes in style.css
 
 = [1.6] - 2024-14-05 =
 
