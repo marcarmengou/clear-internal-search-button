@@ -1,11 +1,11 @@
 === Clear Internal Search Button ===
 Contributors: marc4
 Tags: clear, internal, search, button, usability
-Requires at least: 6.0
-Tested up to: 6.9.1
-Requires PHP: 8.0
+Requires at least: 6.9
+Tested up to: 6.9
+Requires PHP: 8.2
 Tested PHP: 8.3
-Stable tag: 2.0
+Stable tag: 2.1
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -25,10 +25,14 @@ Works in the search engine for posts, pages, comments, users, media library, cat
 
 == Changelog ==
 
+= [2.1] - 2025-03-05 =
+
+* Bumped minimum WordPress requirement to 6.9.
+* Bumped minimum PHP requirement to 8.2.
+* Changed capability check from edit_posts to manage_options.
+
 = [2.0] - 2025-02-27 =
 
-* Bumped minimum PHP requirement to 8.0.
-* Tested up to WordPress 6.9.1.
 * Added capability check to prevent asset loading for unprivileged users.
 * Introduced CISB_VERSION constant to centralise version management.
 * Separated wp_register_script/style from wp_enqueue_script/style.

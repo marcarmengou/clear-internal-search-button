@@ -3,10 +3,10 @@
 Plugin Name: Clear Internal Search Button
 Plugin URI: https://wordpress.org/plugins/clear-internal-search-button/
 Description: Adds a button in admin area to clear text of search field for posts, pages, comments, users, media, categories, tags, plugins, and themes.
-Version: 2.0
-Requires at least: 6.0
-Tested up to: 6.9.1
-Requires PHP: 8.0
+Version: 2.1
+Requires at least: 6.9
+Tested up to: 6.9
+Requires PHP: 8.2
 Tested up to PHP: 8.3
 Author: Marc Armengou
 Author URI: https://www.marcarmengou.com/
@@ -16,16 +16,16 @@ License: GPL2
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
-define( 'CISB_VERSION', '2.0' );
+define( 'CISB_VERSION', '2.1' );
 
 /**
  * Loads the plugin scripts and styles on the relevant admin screens.
  *
- * @since 1.0.0
+ * @since 2.1.0
  * @param string $hook The current admin page hook suffix.
  */
 function cisb_admin_enqueue_scripts( $hook ) {
-	if ( ! current_user_can( 'edit_posts' ) ) {
+	if ( ! current_user_can( 'manage_options' ) ) {
 		return;
 	}
 
