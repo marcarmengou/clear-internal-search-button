@@ -2,10 +2,10 @@
 Contributors: marc4
 Tags: clear, internal, search, button, usability
 Requires at least: 6.3
-Tested up to: 7.0
+Tested up to: 7.1
 Requires PHP: 7.4
 Tested PHP: 8.3
-Stable tag: 2.1.1
+Stable tag: 2.1.2
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -24,6 +24,12 @@ Works in the search engine for posts, pages, comments, users, media library, cat
 3. Install and activate the **Clear Internal Search Button** plugin.
 
 == Changelog ==
+
+= [2.1.2] - 2026-06-14 =
+
+* Escaped enqueued script and style URLs with esc_url().
+* Added title attribute to the clear button.
+* Made the "Clear search field" string translatable via i18n.
 
 = [2.1.1] - 2026-05-25 =
 

@@ -21,10 +21,12 @@ jQuery( document ).ready( function( $ ) {
 			var $wrapper = $searchField.parent();
 
 			// Creates the button inside the search field, hidden by default via CSS
+			var clearLabel = ( typeof cisbData !== 'undefined' && cisbData.clearLabel ) ? cisbData.clearLabel : 'Clear search field';
 			var $button = $( '<button>', {
 				type: 'button',
 				class: 'button clear-search-button',
-				'aria-label': 'Clear search field',
+				'aria-label': clearLabel,
+				title: clearLabel,
 				text: 'X'
 			} ).hide();
 			$wrapper.append( $button );
