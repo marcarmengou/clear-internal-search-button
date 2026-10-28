@@ -1,4 +1,4 @@
-jQuery( document ).ready( function( $ ) {
+jQuery( function( $ ) {
 	// Define a list of selectors for the search fields
 	var searchFieldsSelectors = [
 		'#post-search-input',
@@ -11,6 +11,10 @@ jQuery( document ).ready( function( $ ) {
 		'#tag-search-input'
 	];
 
+	// Strings translated in PHP, with English fallbacks
+	var clearLabel = ( typeof cisbData !== 'undefined' && cisbData.clearLabel ) ? cisbData.clearLabel : 'Clear search field';
+	var clearedMessage = ( typeof cisbData !== 'undefined' && cisbData.clearedMessage ) ? cisbData.clearedMessage : 'Search field cleared.';
+
 	// Iterate over each selector
 	searchFieldsSelectors.forEach( function( selector ) {
 		var $searchField = $( selector );
@@ -18,39 +22,34 @@ jQuery( document ).ready( function( $ ) {
 		if ( $searchField.length ) {
 			// Wraps each search field in a div that will position the clear button
 			$searchField.wrap( '<div class="search-field-wrapper"></div>' );
-			var $wrapper = $searchField.parent();
 
 			// Creates the button inside the search field, hidden by default via CSS
-			var clearLabel = ( typeof cisbData !== 'undefined' && cisbData.clearLabel ) ? cisbData.clearLabel : 'Clear search field';
 			var $button = $( '<button>', {
 				type: 'button',
 				class: 'button clear-search-button',
 				'aria-label': clearLabel,
 				title: clearLabel,
 				text: 'X'
-			} ).hide();
-			$wrapper.append( $button );
+			} );
+			$searchField.parent().append( $button );
 
-			// Function to control the visibility of the button based on the content of the search field
-			function toggleButtonVisibility() {
-				if ( $searchField.val() ) {
-					$button.show();
-				} else {
-					$button.hide();
-				}
-			}
+			// Show the button only when the search field has content
+			$searchField.on( 'input', function() {
+				$button.toggle( '' !== $searchField.val() );
+			} );
 
-			// Show/hide the button on the 'input' event of the search field
-			$searchField.on( 'input', toggleButtonVisibility );
-
-			// Event to clear the search field and hide the button
+			// Clear the search field, hide the button, return focus to the field and tell screen readers
 			$button.on( 'click', function() {
-				$searchField.val( '' ).focus();
-				toggleButtonVisibility(); // Ensures the button is hidden after the field is cleared
+				$searchField.val( '' ).trigger( 'focus' );
+				$button.hide();
+
+				if ( window.wp && wp.a11y && wp.a11y.speak ) {
+					wp.a11y.speak( clearedMessage );
+				}
 			} );
 
 			// Initially check if it is necessary to display the button
-			toggleButtonVisibility();
+			$button.toggle( '' !== $searchField.val() );
 		}
 	} );
 } );

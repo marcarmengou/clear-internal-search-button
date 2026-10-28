@@ -3,7 +3,7 @@
 Plugin Name: Clear Internal Search Button
 Plugin URI: https://wordpress.org/plugins/clear-internal-search-button/
 Description: Adds a button in admin area to clear text of search field for posts, pages, comments, users, media, categories, tags, plugins, and themes.
-Version: 2.1.2
+Version: 2.1.3
 Requires at least: 6.3
 Tested up to: 7.1
 Requires PHP: 7.4
@@ -11,12 +11,15 @@ Tested up to PHP: 8.3
 Author: Marc Armengou
 Author URI: https://www.marcarmengou.com/
 Text Domain: clear-internal-search-button
-License: GPL2
+License: GPLv2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
 */
 
-if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Exit if accessed directly.
+}
 
-define( 'CISB_VERSION', '2.1.2' );
+define( 'CISB_VERSION', '2.1.3' );
 
 /**
  * Loads the plugin scripts and styles on the relevant admin screens.
@@ -44,8 +47,8 @@ function cisb_admin_enqueue_scripts( $hook ) {
 	if ( in_array( $hook, $allowed_screens, true ) ) {
 		wp_register_script(
 			'clear-internal-search-button-js',
-			esc_url( plugin_dir_url( __FILE__ ) . 'clear-internal-search-button.js' ),
-			array( 'jquery' ),
+			plugin_dir_url( __FILE__ ) . 'clear-internal-search-button.js',
+			array( 'jquery', 'wp-a11y' ),
 			CISB_VERSION,
 			true
 		);
@@ -53,14 +56,15 @@ function cisb_admin_enqueue_scripts( $hook ) {
 			'clear-internal-search-button-js',
 			'cisbData',
 			array(
-				'clearLabel' => esc_attr__( 'Clear search field', 'clear-internal-search-button' ),
+				'clearLabel'     => __( 'Clear search field', 'clear-internal-search-button' ),
+				'clearedMessage' => __( 'Search field cleared.', 'clear-internal-search-button' ),
 			)
 		);
 		wp_enqueue_script( 'clear-internal-search-button-js' );
 
 		wp_register_style(
 			'clear-internal-search-button-css',
-			esc_url( plugin_dir_url( __FILE__ ) . 'styles.css' ),
+			plugin_dir_url( __FILE__ ) . 'styles.css',
 			array(),
 			CISB_VERSION
 		);

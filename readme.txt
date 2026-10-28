@@ -5,9 +5,9 @@ Requires at least: 6.3
 Tested up to: 7.1
 Requires PHP: 7.4
 Tested PHP: 8.3
-Stable tag: 2.1.2
-License: GNU General Public License v2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Stable tag: 2.1.3
+License: GPLv2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
 Adds a button in admin area to clear text of search field for posts, pages, comments, users, media, categories, tags, plugins, and themes.
 
@@ -24,6 +24,18 @@ Works in the search engine for posts, pages, comments, users, media library, cat
 3. Install and activate the **Clear Internal Search Button** plugin.
 
 == Changelog ==
+
+= [2.1.3] - 2026-10-28 =
+
+* Replaced deprecated jQuery calls (.ready(), .focus()).
+* Simplified the button visibility logic.
+* Added braces to the ABSPATH check.
+* Fixed the clear button height on the Add Plugins screen.
+* Fixed the clear button position on small screens.
+* Hid the browser's own clear button on the search fields to avoid a duplicated X.
+* Screen readers now announce when the search field is cleared.
+* Minor code cleanup.
+* Tested up to WordPress 7.1.
 
 = [2.1.2] - 2026-06-14 =
 

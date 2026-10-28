@@ -17,25 +17,29 @@
 /* Button position inside search field */
 .button.clear-search-button {
 	position: absolute;
-	margin: 0px -34px;
-	padding: 0px 12px;
+	margin: 0 -34px;
+	padding: 0 12px;
 }
 
-/* Button position in /wp-admin/upload.php and /wp-admin/plugins.php */
-.media-toolbar-primary.search-form .button.clear-search-button,
-.search-form.search-plugins .search-box .button.clear-search-button {
-	margin: 0px -33px;
+/* Button position in /wp-admin/upload.php */
+.media-toolbar-primary.search-form .button.clear-search-button {
+	margin: 0 -33px;
 }
 
-/* Button position in /wp-admin/plugin-install.php */
-.search-form.search-plugins .search-field-wrapper .button.clear-search-button {
-	margin: 0px -34px;
+/* Button height in /wp-admin/plugin-install.php: stretch to the height of the search field (core gives buttons 40px but this field 32px) */
+@media screen and (min-width: 783px) {
+	.plugin-install-php .search-field-wrapper .button.clear-search-button {
+		top: 0;
+		bottom: 0;
+		min-height: 0;
+		line-height: 1;
+	}
 }
 
 /* Button position in /wp-admin/themes.php (when more than one theme is installed) */
 .wp-filter .search-field-wrapper .button.clear-search-button {
 	position: absolute;
-	margin: 0px -34px;
+	margin: 0 -34px;
 	z-index: 10;
 }
 
@@ -43,4 +47,24 @@
 .search-field-wrapper input[type="search"],
 .search-field-wrapper input[type="text"] {
 	padding-right: 20px; /* space for the clear button */
+}
+
+/* Small screens: core stretches the search field to the full row, so the button would fall to the next line. Pin it to the top-right corner of the field instead. */
+@media screen and (max-width: 782px) {
+	.search-field-wrapper {
+		width: fit-content;
+	}
+
+	.wp-admin .search-field-wrapper .button.clear-search-button {
+		top: 0;
+		right: 0;
+		margin: 0;
+		min-height: 40px;
+	}
+}
+
+/* Hide the browser's own clear button: ours replaces it, and both would overlap */
+.search-field-wrapper input[type="search"]::-webkit-search-cancel-button {
+	-webkit-appearance: none;
+	display: none;
 }
